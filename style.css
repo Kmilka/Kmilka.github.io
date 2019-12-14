@@ -1,48 +1,110 @@
-body,
-html {
-  width: 100%;
-  height: 100%;
-  font-family: 'Montserrat', sans-serif;
-  background: url(header.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+* {
+	font-family: "Montserrat", "sans-serif";
+	box-sizing: border-box;
 }
 
-h1 {
-	font-size: 3rem;
-	color: #f8f9fa;
-
+.wrapper {
+	height: 5rem;
+	width: 100%;
 }
 
-.btn {
-	font-weight: 700;
-	border-radius: 300px;
-	text-transform: uppercase;
+header {
+  	background-color: #A4ABFF;
+  	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	overflow: hidden;
 }
 
-.btn-light {
-	background-color: #ee4b00;
-	border-color: #ee4b00; 
+header h1 {
+	float: left;
+	font-size: 2rem;
+	color: #FFFFFF;
+	margin-left: 1rem;
 }
 
-.btn-light:hover {
-	background-color: #ee4b08;
-	border-color: #ee4b08;
-	border-width: 4px;
+nav {
+	padding-top: 0.5rem;
+	float: right; 
 }
 
-.btn-xl {
-	padding: 1rem 2rem;
+nav a {
+	border-radius: 1rem;
+	text-decoration: none;
+	color: #FFFFFF;
+	margin-right: 1.7rem;
+	text-align: center;
+	padding: auto;
 }
 
-hr {
-	border-color: #ee4b00;
-	border-width: 3px;
-	max-width: 65px;
+nav a:hover {
+	background-color: #7D86FF;
+	text-decoration: none;
+	color: #FFFFFF;
 }
 
-.buffer {
-	height: 10rem;
+img {
+	height: auto;
+	width: 30%;
+	padding: 1rem;
+	border-radius: 50%;
+	margin: 0.8rem;
+	border: 0.2rem solid #A4ABFF;
+	float: left;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border: 0.12rem solid #A4ABFF;
+	position: fixed;
+	padding: 0.8rem;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background-color: #FFFFFF;
+}
+
+footer h2 {
+	font-size: 1rem;
+	text-align: center;
+	color: #5662FD;
+}
+
+main {
+	margin-right: 1rem;
+	margin-left: 1rem;
+}
+
+/* Add media queries for responsiveness - when the screen is 550px wide or less, stack the links on top of each other */
+@media screen and (max-width: 550px) {
+  header {
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  }
+  header nav {
+  	display: flex;
+  	flex-direction: column;
+  	width: 100%;
+  }
+  a {
+  	width: 100%;
+  }
+
+  footer {
+  	display: block;
+  }
+  img {
+  	height: auto;
+  	min-width: 5rem;
+  }
+  body {
+  	text-align: center;
+  }
+  .wrapper {
+  	height:11rem;
+  }
 }
